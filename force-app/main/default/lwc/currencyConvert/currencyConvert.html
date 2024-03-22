@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Currency Converter" icon-name="action:change_record_type">
+        <div class="slds-p-around_small">
+            <lightning-combobox label="Source Currency" options={sourceCurrencyOptions} onchange={handleSourceCurrencyChange}></lightning-combobox>
+            <lightning-combobox label="Target Currency" options={targetCurrencyOptions} onchange={handleTargetCurrencyChange}></lightning-combobox>
+            <lightning-input label="Amount" type="number" step="0.01" onchange={handleAmountChange} required></lightning-input>
+            <div class="slds-m-top_small slds-text-align_center">
+                <lightning-button label="Convert" variant="brand" onclick={handleConvert}></lightning-button>
+            </div>
+            <div class="slds-m-top_small">
+                <p>Converted Amount: {convertedAmount}</p>
+            </div>
+        </div>
+    </lightning-card>
+</template>
