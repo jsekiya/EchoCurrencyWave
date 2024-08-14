@@ -8,7 +8,7 @@ public with sharing class CurrencyConvertorController implements Queueable, Data
 
         req.setEndpoint('https://api.apilayer.com/exchangerates_data/latest?symbols=JPY,PLN&base=USD');
         req.setMethod('GET');
-        req.setHeader('apikey', 'Js8KViuVA7M8iIstcIHQ9Mn9tlfmHt7p');
+        req.setHeader('apikey', '************');
         res = http.send(req);
         Map<string, object> responseMap = (Map<string, object>) JSON.deserializeUntyped(res.getbody());
 
